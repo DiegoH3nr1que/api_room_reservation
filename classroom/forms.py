@@ -7,12 +7,12 @@ from django.views import View
 
 
 class WeatherForm(forms.Form):
-    temperature = forms.FloatField()
-    date = forms.DateTimeField()
-    city = forms.CharField(max_length=255)
-    atmosphericPressure = forms.FloatField(required=False)
-    humidity = forms.FloatField(required=False)
-    weather = forms.CharField(max_length=255, required=False)
+    id = forms.IntegerField(read_only=True)
+    name = forms.CharField(max_length=255, allow_blank=True)
+    date = forms.DateTimeField() 
+    description = forms.CharField(max_length=255, allow_blank=True)
+    discipline = forms.CharField(max_length=255, allow_blank=True)
+    reservation = forms.BooleanField()
 
     # def __init__(self, *args, **kwargs):
     #     self.fields['temperature'].label = 'Temperatura'
