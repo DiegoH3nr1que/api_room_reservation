@@ -3,14 +3,14 @@ from django.db import models
 
 class ClassromEntity:
 
-    def __init__(self, id,  name, date, descricao,disciplina= [
+    def __init__(self, id,  name, date, description,discipline= [
         "LP", "ML", "IOT", "BIGDATA", "WEB", "MOBILE"
     ]) -> None:
         self.id = id
         self.name = name
         self.date = date
-        self.descricao = descricao
-        self.disciplina = disciplina
+        self.description = description
+        self.discipline = discipline
 
     def __str__(self) -> str:
         return (f"Classroom <{self.name}")
