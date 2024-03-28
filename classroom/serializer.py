@@ -9,6 +9,7 @@ class WeatherSerializer(serializers.Serializer):
     date = serializers.DateTimeField() 
     description = serializers.CharField(max_length=255, allow_blank=True)
     discipline = serializers.CharField(max_length=255, allow_blank=True)
+    reservation = serializers.BooleanField()
 
     def create(self, validated_data):
         return ClassromEntity(**validated_data)

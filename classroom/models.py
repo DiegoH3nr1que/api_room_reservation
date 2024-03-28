@@ -3,7 +3,7 @@ from django.db import models
 
 class ClassromEntity:
 
-    def __init__(self, id,  name, date, description,discipline= [
+    def __init__(self, id,  name, date, description,reservation, discipline= [
         "LP", "ML", "IOT", "BIGDATA", "WEB", "MOBILE"
     ]) -> None:
         self.id = id
@@ -11,6 +11,7 @@ class ClassromEntity:
         self.date = date
         self.description = description
         self.discipline = discipline
+        self.reservation = reservation
 
     def __str__(self) -> str:
         return (f"Classroom <{self.name}")
