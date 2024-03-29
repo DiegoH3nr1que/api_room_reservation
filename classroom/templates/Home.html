@@ -4,18 +4,18 @@
   <h1>ClassRoom</h1>
   <output id="dataAtual"></output>
 </header>
-
+{% for classroom in classrooms %}
 <div class="card_Class">
   <div class="head_card" >
-    <h1>ttttt</h1>
-    <h2>{{ ClassromEntity.name }}</h2>
-    <h3>{{ ClassromEntity.date }}</h3>
+    <h2>Nome:{{ ClassromEntity.name }}</h2>
+    <h3>Data:{{ ClassromEntity.date }}</h3>
   </div>
   <p>
-    {{ ClassromEntity.disciplina }}<br />
-    {{ ClassromEntity.descricao }}
+    Disciplina:{{ ClassromEntity.disciplina }}<br />
+    Descrção:{{ ClassromEntity.descricao }}
   </p>
   <button type="submit">Delete</button>
 </div>
 
+{% endfor %}
 {% endblock %}

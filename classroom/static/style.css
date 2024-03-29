@@ -1,0 +1,21 @@
+* {
+  margin: 0px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #7fffd4;
+  height: 10vh;
+  margin-bottom: 15vh;
+}
+.card_Class {
+  background-color: #bdffe9;
+  width: 30%;
+  min-height: 30vh;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.
+
