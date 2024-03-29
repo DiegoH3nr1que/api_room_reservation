@@ -1,6 +1,6 @@
 {% extends 'main.html' %} {% block content %}
 
-{% for classroom in classrooms %}
+
 <div class="card_Class">
   <div class="head_card" >
     <h2>Nome:{{ ClassromEntity.name }}</h2>
@@ -10,9 +10,13 @@
     Disciplina:{{ ClassromEntity.disciplina }}<br />
     Descrção:{{ ClassromEntity.descricao }}
   </p>
-  <button type="submit">Delete</button>
+  
+  <div class="btns">
+    <button type="submit">Deletar</button>
+    <button type="submit">Alterar</button>
+  </div>
 </div>
 
 
-{% endfor %}
+
 {% endblock %}

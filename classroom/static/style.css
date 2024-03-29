@@ -1,5 +1,6 @@
 * {
   margin: 0px;
+  font-family: monospace;
 }
 header {
   display: flex;
@@ -9,13 +10,41 @@ header {
   background-color: #7fffd4;
   height: 10vh;
   margin-bottom: 15vh;
+  
 }
 .card_Class {
   background-color: #bdffe9;
   width: 30%;
   min-height: 30vh;
   border-radius: 20px;
-  padding: 1rem;
+  display: grid;
+  margin: 2rem;
+  
 }
-.
+.head_card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #67cbaa;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.btns{
+  width: 95%;
+  height: 2.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: end;
+  gap: 1rem;
+}
+button{
+  width: 6rem;
+  height: 2rem;
+}
+p{padding: 1rem;}
+
 
