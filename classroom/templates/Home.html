@@ -1,0 +1,21 @@
+{% extends 'main.html' %} {% block content %}
+
+<header>
+  <h1>ClassRoom</h1>
+  <output id="dataAtual"></output>
+</header>
+
+<div class="card_Class">
+  <div class="head_card" >
+    <h1>ttttt</h1>
+    <h2>{{ ClassromEntity.name }}</h2>
+    <h3>{{ ClassromEntity.date }}</h3>
+  </div>
+  <p>
+    {{ ClassromEntity.disciplina }}<br />
+    {{ ClassromEntity.descricao }}
+  </p>
+  <button type="submit">Delete</button>
+</div>
+
+{% endblock %}
