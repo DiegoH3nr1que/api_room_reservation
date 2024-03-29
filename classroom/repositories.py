@@ -1,7 +1,7 @@
 from django.conf import settings
 import pymongo
 
-class WeatherRepository:
+class ClassroomRepository:
 
     collection = ''
 

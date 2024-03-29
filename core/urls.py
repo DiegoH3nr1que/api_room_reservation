@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from classroom.views import ClassView
+from classroom.views import ClassView, ClassCreate
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('main', ClassView.as_view(), name=" Home "),
+    path('', ClassView.as_view(), name="Class View"),
+    path('create/', ClassCreate.as_view(), name= "Class Create")
 ]

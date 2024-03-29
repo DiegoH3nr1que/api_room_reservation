@@ -4,7 +4,7 @@ from datetime import datetime
 from rest_framework import serializers
 from .models import ClassromEntity
 
-class WeatherSerializer(serializers.Serializer):
+class ClassroomSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=255, allow_blank=True)
     date = serializers.DateTimeField() 
     description = serializers.CharField(max_length=255, allow_blank=True)
@@ -14,5 +14,5 @@ class WeatherSerializer(serializers.Serializer):
     def create(self, validated_data):
         return ClassromEntity(**validated_data)
     
-    def update(self, instance, validated_data):
-        return super().update(instance, validated_data)
+    # def update(self, instance, validated_data):
+    #     return super().update(instance, validated_data)
