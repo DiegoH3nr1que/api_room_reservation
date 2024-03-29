@@ -11,12 +11,21 @@
     <header
       class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
     >
-    <h1>ClassRoom</h1>
+      <h1>ClassRoom</h1>
 
-    <output id="dataAtual"></output>
+      <output id="dataAtual"></output>
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a href="{% url ' Home ' %}" class="nav-link">Criar sala</a>
+          <a href="{% url ' home ' %}" class="nav-link">Criar sala</a>
+          <a href="{% url ' home ' %}" class="nav-link">Todas as Salas</a>
+          <a href="{% url ' home ' %}" class="nav-link">Detalhes de uma sala</a>
+          <a href="{% url ' home ' %}" class="nav-link"
+            >Listar horarios disponiveis</a
+          >
+          <a href="{% url ' home ' %}" class="nav-link"
+            >Reservar uma Sala de Aula</a
+          >
+          <a href="{% url ' home ' %}" class="nav-link">Cancelar uma Reserva de Sala de Aula</a>
         </li>
       </ul>
     </header>
