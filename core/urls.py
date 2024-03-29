@@ -20,5 +20,5 @@ from classroom.views import ClassView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('main', ClassView.as_view(), name=" Home"),
+    path('main', ClassView.as_view(), name=" Home "),
 ]

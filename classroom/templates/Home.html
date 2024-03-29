@@ -1,9 +1,5 @@
 {% extends 'main.html' %} {% block content %}
 
-<header>
-  <h1>ClassRoom</h1>
-  <output id="dataAtual"></output>
-</header>
 {% for classroom in classrooms %}
 <div class="card_Class">
   <div class="head_card" >
@@ -16,6 +12,7 @@
   </p>
   <button type="submit">Delete</button>
 </div>
+
 
 {% endfor %}
 {% endblock %}

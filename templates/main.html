@@ -1,35 +1,43 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'style.css' %}" />
-    
-</head>
-<body>
-    
-    {% block content %}
+  </head>
+  <body>
+    <header
+      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+    >
+    <h1>ClassRoom</h1>
 
-    {% endblock %}
+    <output id="dataAtual"></output>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="{% url ' Home ' %}" class="nav-link">Insert</a>
+        </li>
+      </ul>
+    </header>
 
-</body>
-<script>
-    // Função para atualizar a data 
-    function atualizaData(){
-        var dataAtual = new Date();
-        var dia = dataAtual.getDate().toString().padStart(2, '0');
-        var mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0');
-        var ano = dataAtual.getFullYear();
-       /* var hora = dataAtual.getHours().toString().padStart(2, '0');
+    {% block content %} {% endblock %}
+  </body>
+  <script>
+    // Função para atualizar a data
+    function atualizaData() {
+      var dataAtual = new Date();
+      var dia = dataAtual.getDate().toString().padStart(2, "0");
+      var mes = (dataAtual.getMonth() + 1).toString().padStart(2, "0");
+      var ano = dataAtual.getFullYear();
+      /* var hora = dataAtual.getHours().toString().padStart(2, '0');
         var minuto = dataAtual.getMinutes().toString().padStart(2, '0');
        */
-        var dataFormatada = dia + '/' + mes + '/' + ano/* + ' ' + hora + ':' + minuto*/;
+      var dataFormatada =
+        dia + "/" + mes + "/" + ano; /* + ' ' + hora + ':' + minuto*/
 
-        document.getElementById('dataAtual').textContent = dataFormatada;
+      document.getElementById("dataAtual").textContent = dataFormatada;
     }
     atualizaData();
-        
-    </script>
+  </script>
 </html>

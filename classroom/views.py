@@ -7,6 +7,6 @@ class ClassView(View):
     def get(self, request):
         return render(request,'Home.html')
     
-class ClassDelete(View):
-    def delete(self, request):
-        return render(request, "Home.html")
+# class ClassDelete(View):
+#     def delete(self, request):
+#         return render(request, "Home.html")
