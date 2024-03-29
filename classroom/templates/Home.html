@@ -1,22 +1,17 @@
-{% extends 'main.html' %} {% block content %}
-
-
+{% extends 'main.html' %} {% block content %} {% for classrom in classroms %}
 <div class="card_Class">
-  <div class="head_card" >
-    <h2>Nome:{{ ClassromEntity.name }}</h2>
-    <h3>Data:{{ ClassromEntity.date }}</h3>
+  <div class="head_card">
+    <h2>Nome:{{ classrom.name }}</h2>
+    <h3>Data:{{ classrom.date }}</h3>
   </div>
   <p>
-    Disciplina:{{ ClassromEntity.disciplina }}<br />
-    Descrção:{{ ClassromEntity.descricao }}
+    Disciplina:{{ classrom.disciplina }}<br />
+    Descrção:{{ classrom.descricao }}
   </p>
-  
+
   <div class="btns">
     <button type="submit">Deletar</button>
     <button type="submit">Alterar</button>
   </div>
 </div>
-
-
-
-{% endblock %}
+{% endfor %} {% endblock %}

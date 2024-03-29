@@ -28,16 +28,16 @@ class ClassCreate(View):
         return render(request, "form.html", {"form":classForm})
     
     def post(self, request):
-        weatherForm = ClassForm(request.POST)
-        if weatherForm.is_valid():
-            serializer = ClassroomSerializer(data=weatherForm.data)
+        classroomForm = ClassForm(request.POST)
+        if classroomForm.is_valid():
+            serializer = ClassroomSerializer(data=classroomForm.data)
             if (serializer.is_valid()):
-                repository = ClassroomRepository(collectionName='weathers')
+                repository = ClassroomRepository(collectionName='classrooms')
                 repository.insert(serializer.data)
             else:
                 print(serializer.errors)
         else:
-            print(weatherForm.errors)
+            print(classroomForm.errors)
 
         return redirect('Class View')
 
