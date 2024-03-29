@@ -2,6 +2,9 @@
   margin: 0px;
   font-family: monospace;
 }
+ul{
+  list-style: none;
+}
 header {
   display: flex;
   flex-direction: row;
